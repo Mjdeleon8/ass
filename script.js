@@ -7,10 +7,14 @@ let description = document.getElementById("description");
 let descriptionDisplay = document.getElementById("descriptionDisplay");
 descriptionDisplay.textContent = description.value;
 
+let optionValue = document.getElementById("option-value");
+let subjectValue = document.getElementById("subjectValue");
+
+const dateValue = document.getElementById("dateValue");
+const dateDisplay = document.getElementById("dueDisplay");
+
 function submitButton() {
-  const optionValue = document.getElementById("option-value").value;
-  const subjectValue = document.getElementById("subjectValue");
-  subjectValue.textContent = optionValue;
+  subjectValue.textContent = optionValue.value;
   nameDisplay.textContent = nameValue.value;
   descriptionDisplay.textContent = description.value;
 
@@ -30,11 +34,8 @@ function submitButton() {
     "Dec",
   ];
 
-  const dateValue = document.getElementById("dateValue").value;
-  const dateDisplay = document.getElementById("dueDisplay");
-
-  if (dateValue) {
-    const overAllDate = dateValue.split("-");
+  if (dateValue.value) {
+    const overAllDate = dateValue.value.split("-");
 
     if (overAllDate.length === 3) {
       const dateObject = new Date(
@@ -61,23 +62,39 @@ function deleteButton() {
   // REMOVE SUBJECT VALUE
   subjectValue = "";
   // REMOVE DATE VALUE
-  if (typeof nameValue == undefined) {
-    nameValue.value = "";
-  }
+  nameValue.value = "";
 
   // REMOVE DATE VALUE
-  descriptionValue = "";
+  description.value = "";
+
+  optionValue.value = "";
+
+  dateValue.value = "";
 }
 
 // DELETE THE VALUE OF CONTAINER
 
 function removeBtn() {
+  subjectValue = "";
+  // REMOVE DATE VALUE
+  nameValue.value = "";
+
+  // REMOVE DATE VALUE
+  description.value = "";
+
+  optionValue.value = "";
+
+  dateValue.value = "";
   // REMOVE SUBJECT VALUE
   subjectValue.textContent = "";
   // REMOVE DATE VALUE
   nameDisplay.textContent = "";
   // REMOVE DATE VALUE
   descriptionDisplay.textContent = "";
+
+  subjectValue = "";
+
+  dateDisplay.textContent = "";
 }
 
 // dateValue.addEventListener("change", dateDisplay);
