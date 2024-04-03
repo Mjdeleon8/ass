@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Oswald:wght@200&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid grey;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.separator-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* input active */
+
+.separator-input > input:active {
+  border-bottom: 1px solid #ffae31;
+  color: #ffae31;
+}
+
+/* END */
+
+.content-container {
+  height: 600px;
+  width: 900px;
+  margin: auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+#option-value {
+  width: 20%;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* button */
+
+.btn {
+  all: unset;
+}
+
+.btn-style {
+  padding: 8px 14px;
+  background-color: #ffae31;
+  width: 30%;
+  text-align: center;
+}
+
+/* submit container value */
+
+.submit-value-container {
+  height: 50vh;
+  width: 65%;
+  background: linear-gradient(
+    to right,
+    #beb7b7 0%,
+    #fcbcbc 25%,
+    #fcbcbc 75%,
+    #beb7b7 100%
+  );
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+/* DISPLAY FLEX OF EACH SUBMIT CONTAINER */
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+/* END */
+
+/* SUBJECT AND DUE DATE ONE CONTAINER */
+
+.container-subject-dueDate {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 100px;
+}
+
+/* END  */
+
+/* NAME CONTAINER  */
+
+.container-name {
+  margin-top: 1rem;
+}
+
+/* END */
+
+/* DESCRIPTION CONTAINER */
+
+.container-description {
+  margin-top: 1rem;
+}
+
+/* END */

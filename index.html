@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 style="color: #ffae31; text-align: center; margin: 0.8rem 0">
+      Add Assignment
+    </h1>
+    <div class="content-container">
+      <div class="content">
+        <label for="">Subject: </label>
+        <div>
+          <!-- dummy container -->
+          <select name="" id="option-value">
+            <option></option>
+            <option value="COMPROG">COMPROG</option>
+            <option value="PR">PR</option>
+            <option value="STATS">STATS</option>
+            <option value="ENTREP">ENTREP</option>
+            <option value="R&W">R&W</option>
+            <option value="P.E">P.E</option>
+            <option value="PPTTP">PPTTP</option>
+            <option value="MIL">MIL</option>
+            <option value="Physci">Physci</option>
+          </select>
+        </div>
+        <div class="separator-input">
+          <label for="">Name: </label>
+          <input
+            type="text"
+            name=""
+            class="name-style"
+            id="name"
+            placeholder="Name"
+          />
+          <label for="">Description: </label>
+          <input
+            type="text"
+            name=""
+            id="description"
+            placeholder="Performance Task"
+          />
+        </div>
+        <div class="date-container">
+          <label for="">Due Date:</label>
+          <input type="date" name="" id="dateValue" />
+        </div>
+        <button
+          style="color: white"
+          class="btn btn-style"
+          onclick="submitButton()"
+        >
+          Submit
+        </button>
+        <button
+          style="color: white"
+          class="btn btn-style"
+          onclick="deleteButton()"
+        >
+          Delete Container
+        </button>
+      </div>
+    </div>
+
+    <!-- submit -->
+
+    <div
+      style="display: none; position: relative"
+      class="submit-value-container"
+      id="submitValue"
+    >
+      <div class="container-subject-dueDate">
+        <div class="container-subject">
+          <div class="flex">
+            <h2 style="color: white" id="subjectValue"></h2>
+          </div>
+        </div>
+        <div style="position: relative" class="container-dueDate">
+          <div class="flex">
+            <h3
+              style="transform: translateX(80px); color: white"
+              id="dueDisplay"
+            ></h3>
+          </div>
+        </div>
+      </div>
+      <div class="container-name">
+        <div class="flex">
+          <h2 style="color: white" id="nameDisplay"></h2>
+        </div>
+      </div>
+      <div class="container-description">
+        <p
+          style="text-align: justify; overflow-wrap: break-word; color: white"
+          id="descriptionDisplay"
+        ></p>
+      </div>
+      <button
+        style="
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          margin: 40px;
+          color: #fff;
+        "
+        class="btn btn-style"
+        onclick="removeBtn()"
+      >
+        Remove
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
